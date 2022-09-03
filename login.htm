@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script type="text/javascript">
+
+function checkInputData(){
+    var email= document.login.email.value;
+    var index=email.indexOf("@");
+    var dot=email.indexOf(".");
+var emlen=email.length;
+    if(emlen==0){
+        alert("Please fill email field");
+    }
+    else if(dot<1)
+    alert("invalid email")
+    else if(index<1){
+        alert("Email should contain @");
+    }
+    
+    var pass=document.login.password.value;
+    var passlen=pass.length;
+    if(passlen==0)
+    alert("Please fill password field");
+    else if(passlen<8){
+        alert("password is too short");
+    }
+   
+}
+
+
+    </script>
+
+</head>
+<body>
+    <div class="cont" style="float: left; border: 5; position: relative;
+     background-image:  linear-gradient(rgba(0, 0, 0,0.5),rgba(0, 0, 0, 0.5)), url(images/login.jpg);;
+     width:900px; height: 900px; left: 0px; background-color: black;background-repeat: no-repeat; background-size: cover;
+  
+  
+ 
+     ">
+   
+
+    </div>
+    <form class="box" action="proHomepage.html" method="post" onsubmit="checkInputData()" name="login" >
+        <h1>Login</h1>
+        <input type="text" name="email" placeholder="email">
+        <input type="password" name="password"  placeholder="password"     >
+         <input type="submit"  name=""  value="login" >   
+    </form>
+</body>
+</html>
